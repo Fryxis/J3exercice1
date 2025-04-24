@@ -1,4 +1,4 @@
-TAG=v1.4.0
-NAME=✨ Version améliorée avec tags custom
-NOTES=Support des tags personnalisés et releases nommées via fichier externe.
+TAG=v1.0.0
+NAME=Version 1.0.0 stable
+NOTES=Ajout des fonctions d'inscription, amélioration des performances.
 
