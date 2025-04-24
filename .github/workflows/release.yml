@@ -1,16 +1,15 @@
 name: 🚀 Release Pipeline
 
 on:
-  workflow_dispatch:    # Lancement manuel depuis l'interface GitHub
+  workflow_dispatch:
   push:
     branches:
-      - main            # Déclenchement auto sur main
-      - release/**      # Déclenchement sur branches de type release/*
+      - main
+      - release/**
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    name: 🔁 Lancer une release
 
     steps:
     - name: 🧾 Cloner le dépôt
@@ -27,6 +26,11 @@ jobs:
 
     - name: ✅ Lancer les tests
       run: npm test
+
+    - name: 🔧 Configurer Git
+      run: |
+        git config --global user.email "ci-bot@example.com"
+        git config --global user.name "CI Release Bot"
 
     - name: 🚀 Lancer le script de release
       run: ./release.sh standard-version
