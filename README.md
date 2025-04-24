@@ -19,10 +19,11 @@ Créer un fichier `CHANGELOG.md` qui résume les changements récents apportés 
 ```bash
 # Récupérer les 5 derniers commits
 git log -n 5 --pretty=format:"%h %s"
-
+```
 # Créer le fichier CHANGELOG.md et y écrire manuellement :
-nano CHANGELOG.md
-
+```bash
+vim CHANGELOG.md
+```
 # 📝 Exemple de contenu du fichier
 
 # Changelog
