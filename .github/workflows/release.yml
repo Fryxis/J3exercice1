@@ -1,0 +1,35 @@
+name: 🚀 Release Pipeline
+
+on:
+  workflow_dispatch:    # Lancement manuel depuis l'interface GitHub
+  push:
+    branches:
+      - main            # Déclenchement auto sur main
+      - release/**      # Déclenchement sur branches de type release/*
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: 🔁 Lancer une release
+
+    steps:
+    - name: 🧾 Cloner le dépôt
+      uses: actions/checkout@v3
+
+    - name: 🧰 Configuration Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: 📦 Installer les dépendances
+      run: npm ci
+
+    - name: ✅ Lancer les tests
+      run: npm test
+
+    - name: 🚀 Lancer le script de release
+      run: ./release.sh standard-version
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
