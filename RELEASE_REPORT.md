@@ -125,5 +125,5 @@ Un workflow release.yml a été ajouté dans .github/workflows :
 ## 🙌 Auteur
 
 - **Nom** : Fryxis  
-- **Projet** : [J3exercice]  
+- **Projet** : [J3exercice1]  
 - **Date** : Avril 2025
