@@ -110,7 +110,15 @@ Un workflow release.yml a été ajouté dans .github/workflows :
 ## 📸 Captures & preuves
 
 - ✅ [Release GitHub v1.0.3](#) *https://github.com/Fryxis/J3exercice1*
-- Voir dans le zip
+
+- ✅ Release GitHub v1.0.3  
+  ![Release GitHub](./screenshots/release.png)
+
+- ✅ Tag Git v1.0.3  
+  ![Tag Git](./screenshots/tag.png)
+
+- ✅ Changelog généré automatiquement  
+  ![Changelog](./screenshots/changelog.png)
 
 ---
 
